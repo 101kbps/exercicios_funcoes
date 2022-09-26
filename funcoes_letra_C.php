@@ -12,13 +12,14 @@
     function maior_num(){
     $numeros = [1, 2, 3, 101, 5];
     $maior = 0;
+    $string="Valores no vetor: ".implode(",",$numeros).'<br>';
+    echo $string;
     foreach($numeros as $a){
-        echo $a.'<br>';
         if($a > $maior){
             $maior = $a;
         }
     }
-    echo "O maior número é".$maior;
+    echo "O maior número é: ".$maior;
 }
 maior_num()
     ?>
