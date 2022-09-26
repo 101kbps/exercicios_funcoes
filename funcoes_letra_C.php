@@ -11,14 +11,14 @@
     <?php
     function maior_num(){
     $numeros = [1, 2, 3, 101, 5];
-    $menor = 0;
+    $maior = 0;
     foreach($numeros as $a){
         echo $a.'<br>';
-        if($a > $menor){
-            $menor = $a;
+        if($a > $maior){
+            $maior = $a;
         }
     }
-    echo "O maior número é".$menor;
+    echo "O maior número é".$maior;
 }
 maior_num()
     ?>
