@@ -10,16 +10,20 @@
 <h1>Exercício Funções Letra F- Busca Texto</h1>
     <?php
 
-    function busca_texto1($b){
-    echo "Foi encontrada a palavra:"."<p style='color:red;'>".$b."<p style='color:black;'>";
-    }
-    $busca_texto= 'busca_texto1';
-        $texto=["Rosa","Violeta","Bromelia","Caliandra","Magnolia","Cravo"];
-        foreach ($texto as $b) {
-            $busca_texto($b);
-            echo "<br>";
+    function buscaTexto($texto,$busca){
 
-        }
+        $vetor_busca[] =$busca;
+        $vetor_substituir = array("<spam style=\"color: red\">".$busca."</spam>");
+
+         $novafrase = str_replace($vetor_busca, $vetor_substituir,$texto);
+
+        return $novafrase;
+    }
+
+    $texto = "Estou cansada de fazer o dever pelos outros e não me sentir valorizada.";
+    $busca = "cansada";
+           
+    echo buscaTexto($texto,$busca);
 
     ?>
 </body>
